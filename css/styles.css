@@ -329,15 +329,15 @@ input[type=checkbox] {
   grid-column: 13/span 1;
 }
 
-#results .container {
+#releases .container {
   padding-bottom: 95px;
   position: relative;
   background: transparent;
 }
-#results #search-results {
+#releases #search-results {
   grid-column: 3/13;
 }
-#results .swiper {
+#releases .swiper {
   grid-column: 3/13;
   justify-content: center;
   align-items: center;
@@ -345,7 +345,7 @@ input[type=checkbox] {
   height: 100%;
   padding: 0 40px;
 }
-#results .swiper-slide {
+#releases .swiper-slide {
   text-align: center;
   font-size: 18px;
   background: #fff;
@@ -353,17 +353,17 @@ input[type=checkbox] {
   justify-content: center;
   align-items: center;
 }
-#results .swiper-slide img {
+#releases .swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-#results .swiper-button-next::after,
-#results .swiper-button-prev::after {
+#releases .swiper-button-next::after,
+#releases .swiper-button-prev::after {
   content: "";
 }
-#results .swiper-button-prev {
+#releases .swiper-button-prev {
   background-image: url("/img/previous.svg") !important;
   background-repeat: no-repeat;
   position: absolute;
@@ -372,7 +372,7 @@ input[type=checkbox] {
   transform: translateY(-50%);
   grid-column: 2;
 }
-#results .swiper-button-next {
+#releases .swiper-button-next {
   background-image: url("/img/next.svg") !important;
   background-repeat: no-repeat;
   position: absolute;

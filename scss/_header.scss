@@ -1,0 +1,174 @@
+.container {
+    background: $darkGrey;
+    padding: 1.875rem 0;
+
+    .logo {
+        grid-column: 2/4;
+
+        font-family: $inria;
+        color: white;
+        font-weight: 700;
+        font-size: 2.25em;
+        line-height: 2.6975rem;
+
+        &:hover,
+        &:visited {
+            color: $white;
+        }
+
+        span {
+            color: $red;
+        }
+    }
+
+    nav {
+        grid-column: 9/-2;
+
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+
+            li {
+                font-family: $inria;
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 16.79px;
+                letter-spacing: 3%;
+                text-transform: uppercase;
+
+                &:hover {
+                    cursor: pointer;
+                    color: $red;
+                    /* Add your desired hover color here */
+                }
+            }
+        }
+    }
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba($darkGrey, .5);
+}
+
+.modal-content {
+    background-color: $black;
+    margin: 15% auto;
+    padding: 60px;
+    border: 1px solid #888;
+    width: 400px;
+    position: relative;
+}
+
+.modal-tabs {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    margin-bottom: 20px;
+
+}
+
+.tab-button {
+    padding: 10px 20px;
+    background-color: transparent;
+    font-family: $inria;
+    text-transform: uppercase;
+    color: $white;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    border-radius: 8px;
+    border-top-left-radius: 8px;
+    margin: 0;
+    border: 1px solid $white;
+    cursor: pointer;
+}
+
+.tab-button.active {
+    background-color: $red;
+}
+
+.tab-button:first-child {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.tab-button:last-child {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.tab-content {
+    display: none;
+}
+
+
+#loginForm input[type="text"],
+#loginForm input[type="password"],
+#registerForm input[type="text"],
+#registerForm input[type="password"] {
+    width: 100%;
+    height: 44px;
+    top: 174px;
+    left: 61px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 12px;
+    color: $darkGrey;
+}
+
+input[type="checkbox"] {
+    margin-bottom: 20px;
+}
+
+.loginButton,
+.registerButton {
+    width: 100%;
+    border-radius: 8px;
+    border: none;
+    background-color: $red;
+    color: $white;
+    font-family: $inria;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    padding: 10px;
+    text-transform: uppercase;
+
+    &:hover {
+        background-color: darken($red, 10%);
+    }
+}
+
+.close {
+    color: #aaa;
+    float: left;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+
+    img {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

@@ -1,8 +1,11 @@
 @mixin texts {
-    h1, p {
+
+    h1,
+    p {
         text-align: left;
         padding-bottom: 40px;
-        line-height: 160%; /* 25.6px */ 
+        line-height: 160%;
+        /* 25.6px */
     }
 }
 
@@ -27,6 +30,5 @@
 @mixin container($max-width: 90rem) {
     display: grid;
     grid-template-columns:
-      minmax(5vw, 1fr) repeat(12, minmax(11px, $max-width / 12))
-      minmax(5vw, 1fr);
-  }
+        minmax(5vw, 1fr) repeat(12, minmax(11px, $max-width / 12)) minmax(5vw, 1fr);
+}

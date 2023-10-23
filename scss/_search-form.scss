@@ -1,0 +1,43 @@
+#search {
+
+    .container {
+        align-items: center;
+        justify-content: center;
+        padding: 80px 0;
+        background: transparent;
+    }
+
+    #search-form {
+        grid-column: 2/-1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        input {
+            padding: 16px 16px;
+            color: $black;
+            border-radius: 8px 0 0 8px;
+            border: none;
+            outline: none;
+        }
+
+        button {
+            background: $red;
+            border-radius: 0 8px 8px 0;
+            font-size: 1em;
+            padding: 14px 16px 15px 16px;
+            border: none;
+
+            &:hover {
+                cursor: pointer;
+                background: darken($red, 10%);
+            }
+
+            img {
+                width: 18px;
+                height: 16px;
+                place-items: center;
+            }
+        }
+    }
+}

@@ -1,52 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/style.css" />
-    <title>BeMovies</title>
-  </head>
-  <body>
-    <!-- HEADER -->
-    <header>
-      <div class="container">
-        <a class="logo" href="#">BE<span>MOVIES</span></a>
-        <nav>
-          <ul class="nav-bar">
-            <li><a href=""></a>search</li>
-            <li><a href=""></a>latest</li>
-            <li><a href=""></a>genres</li>
-            <li><a href=""></a>register</li>
-            <li><a href=""></a>signin</li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <!-- MAIN -->
-    <main>
-      <div class="container">
-        
-      </div>
-    </main>
-    <!-- HERO SECTION -->
-    <section>
-      <div class="container">
 
-      </div>
-    </section>
-    <!-- GALLERY -->
-    <article>
-      <div class="container">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <title>BeMovies</title>
+</head>
 
-      </div>
-    </article>
-    <!-- FOOTER -->
-    <footer>
-      <div class="container">
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+      <a class="logo" href="#"><span>BE</span>MOVIES</a>
+      <nav>
+        <ul class="nav-bar">
+          <li><a href="#search"></a>search</li>
+          <li><a href="#results"></a>latest</li>
+          <li><a href="#genres"></a>genres</li>
+          <li><a href="#registerModal" onclick="openModal('register')">register</a></li>
+          <li><a href="#registerModal" onclick="openModal('login')">signin</a></li>        </ul>
+      </nav>
 
+    </div>
+  </header>
+
+  <!-- Register/Login Modal -->
+<div id="registerModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()"><img src="img/closeModal.svg" alt=""></span>
+    <div class="modal-tabs">
+      <button class="tab-button" onclick="switchTab('login')">Login</button>
+      <button class="tab-button active" onclick="switchTab('register')">Register</button>
+    </div>
+    <div id="loginContent" class="tab-content" style="display: none;">
+      <form id="loginForm">
+        <label for="username" placeholder="Username"></label>
+        <input type="text" id="loginUsername" required>
+        <label for="password" placeholder="Password"></label>
+        <input type="password" id="loginPassword" required>
+        <label for="remember">Remember me</label>
+        <input type="checkbox" id="loginRemember">
+        <br>
+        <button type="submit" id="loginButton" class="loginButton">Login</button>
+        <a href="">I forgot my password</a>
+        <p>Not a member yet? <a href="#registerForm">Signin</a></p>
+      </form>
+    </div>
+    <div id="registerContent" class="tab-content">
+      <form id="registerForm">
+        <input type="text" id="registerUsername" placeholder="Username"required>
+        <br>
+        <input type="password" id="registerPassword" placeholder="Password" required>
+        <br>
+        <label for="remember">Remember me</label>
+        <input type="checkbox" id="registerRemember">
+        <br>
+        <button type="submit" id="registerButton" class="registerButton">Signup</button>
+      </form>
+    </div>
+  </div>
+</div>
+  <!-- Register/Login Modal type 1
+<div id="registerModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2 id="modalTitle"></h2>
+    <form id="modalForm">
+      <label for="username">Username:</label>
+      <input type="text" id="username" required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" required>
+      <label for="remember">Remember me:</label>
+      <input type="checkbox" id="remember">
+      <button type="submit" id="submitButton"></button>
+    </form>
+  </div>
+</div>-->
+
+  <!-- SEARCH FORM -->
+  <main id="search">
+    <div class="container">
+      <form id="search-form">
+        <input type="text" placeholder="Search for a movie" />
+        <button><img src="img/search.svg"></button>
+      </form>
+    </div>
+  </main>
+
+  <!-- SEARCH RESULTS -->
+  <section id="results">
+    <div class="container">
+      <div id="search-results">
+          <h3>Results for "[searchTerm]"</h3>
+          <br>
+          
+          <div class="swiper resultsSwiper">
+              <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="img/poster.png"></div>
+                  <div class="swiper-slide"><img src="img/poster.png"></div>
+                  <div class="swiper-slide"><img src="img/poster.png"></div>
+                  <div class="swiper-slide"><img src="img/poster.png"></div>
+                  <div class="swiper-slide"><img src="img/poster.png"></div>
+              </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
       </div>
-    </footer>
-    <script src="app.js" defer></script>
-  </body>
+    </div>
+</section>
+  
+<!-- LATEST RELEASE-->
+  <section id="releases">
+    <div class="container">
+      <div id="search-results">
+          <h3>Latest Releases</h3>
+          <br>
+          
+          <div class="swiper releasesSwiper">
+              <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="img/poster.png"></div>
+                  <div class="swiper-slide"><img src="img/poster.png"></div>
+                  <div class="swiper-slide"><img src="img/poster.png"></div>
+                  <div class="swiper-slide"><img src="img/poster.png"></div>
+                  <div class="swiper-slide"><img src="img/poster.png"></div>
+              </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+</section>
+
+  <!-- RESULTS SECTION
+  <section id="#results">
+    <div class="container">
+
+    </div>
+  </section>
+  <!-- GALLERY 
+  <article>
+    <div class="container">
+
+    </div> 
+  </article>-->
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p class="logo"><span class="footer__logo--span">BE</span>MOVIES</p>
+      <nav class="footer">
+        <ul class="nav-bar">
+          <li>
+            <a href="#">Search</a>
+          </li>
+          <li>
+            <a href="#">Latest</a>
+          </li>
+          <li>
+            <a href="#">Genres</a>
+          </li>
+          <li>
+            <a href="#">Register</a>
+          </li>
+          <li>
+            <a href="#">Signin</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="copyright">
+        <p>@2023 - All rights reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <!--JAVASCRIPT-->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <script src="app.js" defer></script>
+</body>
+
 </html>
-

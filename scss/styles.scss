@@ -1,0 +1,27 @@
+@import '00-variables';
+@import '01-mixins';
+@import '02-reset';
+@import '03-commons';
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: $inria;
+    background: $bg;
+    color: $white;
+}
+
+.container {
+    @include container;
+    align-items: center;
+    padding: 1.875rem 0;
+}
+
+@import 'header';
+@import 'search-form';
+@import 'search-results';
+@import 'releases';
+@import 'genres';
+@import 'footer';
