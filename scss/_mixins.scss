@@ -1,0 +1,32 @@
+@mixin texts {
+    h1, p {
+        text-align: left;
+        padding-bottom: 40px;
+        line-height: 160%; /* 25.6px */ 
+    }
+}
+
+@mixin flexBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin containerDesktop {
+    margin: 1.25rem auto;
+    padding: 0 1.25rem;
+    max-width: 90rem; // 1440px
+}
+
+@mixin containerMobile {
+    margin: 20px auto;
+    padding: 0 20px;
+    max-width: 23.4375rem; // 375px
+}
+
+@mixin container($max-width: 90rem) {
+    display: grid;
+    grid-template-columns:
+      minmax(5vw, 1fr) repeat(12, minmax(11px, $max-width / 12))
+      minmax(5vw, 1fr);
+  }
