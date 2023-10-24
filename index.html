@@ -16,8 +16,8 @@
       <a class="logo" href="#"><span>BE</span>MOVIES</a>
       <nav>
         <ul class="nav-bar">
-          <li><a href="#search"></a>search</li>
-          <li><a href="#results"></a>latest</li>
+          <li><a href="#section-search"></a>search</li>
+          <li><a href="#section-results"></a>latest</li>
           <li><a href="#genres"></a>genres</li>
           <li><a href="#registerModal" onclick="openModal('register')">register</a></li>
           <li><a href="#registerModal" onclick="openModal('login')">signin</a></li>        </ul>
@@ -110,11 +110,53 @@
       </div>
     </div>
 </section>
-  
-<!-- LATEST RELEASE-->
-  <section id="releases">
+  <!-- SEARCH RESULTS -->
+  <section id="results">
     <div class="container">
       <div id="search-results">
+          <h3>Results for "[searchTerm]"</h3>
+          <br>
+          
+          <div class="swiper resultsSwiper">
+              <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="img/poster.png"></div>
+                  <div class="swiper-slide"><img src="img/poster.png"></div>
+                  <div class="swiper-slide"><img src="img/poster.png"></div>
+                  <div class="swiper-slide"><img src="img/poster.png"></div>
+                  <div class="swiper-slide"><img src="img/poster.png"></div>
+              </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+</section>
+  <!-- SEARCH RESULTS -->
+  <section id="results">
+    <div class="container">
+      <div id="search-results">
+          <h3>Results for "[searchTerm]"</h3>
+          <br>
+          
+          <div class="swiper resultsSwiper">
+              <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="img/poster.png"></div>
+                  <div class="swiper-slide"><img src="img/poster.png"></div>
+                  <div class="swiper-slide"><img src="img/poster.png"></div>
+                  <div class="swiper-slide"><img src="img/poster.png"></div>
+                  <div class="swiper-slide"><img src="img/poster.png"></div>
+              </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+</section>
+  
+<!-- LATEST RELEASE
+  <section id="releases">
+    <div class="container">
+      <div id="releases-swiper">
           <h3>Latest Releases</h3>
           <br>
           
@@ -131,7 +173,7 @@
           <div class="swiper-button-prev"></div>
       </div>
     </div>
-</section>
+</section> -->
 
   <!-- RESULTS SECTION
   <section id="#results">
