@@ -20,7 +20,7 @@
           <li><a href="#section-results"></a>latest</li>
           <li><a href="#genres"></a>genres</li>
           <li><a href="#registerModal" onclick="openModal('register')">register</a></li>
-          <li><a href="#registerModal" onclick="openModal('login')">signin</a></li>
+          <li><a href="#registerModal" onclick="openModal('register')">signin</a></li>
         </ul>
       </nav>
 
@@ -88,16 +88,20 @@
 
         <div class="swiper resultsSwiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="img/poster.png"></div>
-            <div class="swiper-slide"><img src="img/poster.png"></div>
-            <div class="swiper-slide"><img src="img/poster.png"></div>
-            <div class="swiper-slide"><img src="img/poster.png"></div>
             <div class="swiper-slide">
-              <div class="img__wrap">
-                <img src="img/poster.png" />
-                <div class="img__description"><p>Movie description</p></div>
+              <img src="img/poster.png" alt="">
+              <div class="overlay">
+                <p class="title">The Godfather part III</p>
+                <p class="date">1990</p>
+                <p class="genre">Crime / Drama / Thriller</p>
+                <img class="starScore" src="img/star.svg" alt="starScore">
+                <p class="score">7.4</p>
               </div>
             </div>
+            <div class="swiper-slide"><img src="img/poster.png"></div>
+            <div class="swiper-slide"><img src="img/poster.png"></div>
+            <div class="swiper-slide"><img src="img/poster.png"></div>
+            <div class="swiper-slide"><img src="img/poster.png"></div>
           </div>
         </div>
         <div class="swiper-button-next resultsSwiper-next"></div>
