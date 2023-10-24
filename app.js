@@ -1,12 +1,13 @@
 /*-----SWIPER JS-----*/
-var swiper = new Swiper(".resultsSwiper", {
+var resultsSwiper = new Swiper(".resultsSwiper", {
+    el: ".resultsSwiper",
     slidesPerView: 4,
     spaceBetween: 30,
     centeredSlides: true,
     navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
+        nextEl: ".resultsSwiper-next",
+        prevEl: ".resultsSwiper-prev",
+      },
     // Responsive breakpoints
     breakpoints: {
         // when window width is >= 320px
@@ -32,14 +33,49 @@ var swiper = new Swiper(".resultsSwiper", {
     }
 });
 
-var swiper = new Swiper(".releasesSwiper", {
+var releasesSwiper = new Swiper(".releasesSwiper", {
+    el: ".releasesSwiper",
     slidesPerView: 4,
     spaceBetween: 30,
     centeredSlides: true,
     navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
+        nextEl: ".releasesSwiper-next",
+        prevEl: ".releasesSwiper-prev",
+      },
+    // Responsive breakpoints
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 20
+        },
+        // when window width is >= 480px
+        480: {
+            slidesPerView: 2,
+            spaceBetween: 30
+        },
+        // when window width is >= 640px
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 40
+        },
+        // when window width is >= 1024px
+        1024: {
+            slidesPerView: 4,
+            spaceBetween: 40
+        }
+    }
+});
+
+var genresSwiper = new Swiper(".genresSwiper", {
+    el: ".genresSwiper",
+    slidesPerView: 4,
+    spaceBetween: 30,
+    centeredSlides: true,
+    navigation: {
+        nextEl: ".genresSwiper-next",
+        prevEl: ".genresSwiper-prev",
+      },
     // Responsive breakpoints
     breakpoints: {
         // when window width is >= 320px
@@ -67,34 +103,13 @@ var swiper = new Swiper(".releasesSwiper", {
 
 
 // /*-----REGISTER MODAL-----*/
-// function openModal(type) {
-//     var modal = document.getElementById("registerModal");
-//     var modalTitle = document.getElementById("modalTitle");
-//     var submitButton = document.getElementById("submitButton");
-
-//     if (type === "register") {
-//         modalTitle.textContent = "Register";
-//         submitButton.textContent = "Register";
-//     } else if (type === "login") {
-//         modalTitle.textContent = "Login";
-//         submitButton.textContent = "Login";
-//     }
-
-//     modal.style.display = "block";
-// }
-
-// // Close Modal
-// function closeModal() {
-//     var modal = document.getElementById("registerModal");
-//     modal.style.display = "none";
-// }
 
 function openModal(type) {
-    var modal = document.getElementById("registerModal");
-    var registerTab = document.getElementById("registerContent");
-    var loginTab = document.getElementById("loginContent");
-    var registerButton = document.getElementById("registerButton");
-    var loginButton = document.getElementById("loginButton");
+    const modal = document.querySelector("#registerModal");
+    const registerTab = document.querySelector("#registerContent");
+    const loginTab = document.querySelector("#loginContent");
+    const registerButton = document.querySelector("#registerButton");
+    const loginButton = document.querySelector("#loginButton");
 
     if (type === "register") {
         registerTab.style.display = "block";
@@ -112,10 +127,10 @@ function openModal(type) {
 }
 
 function switchTab(tab) {
-    var registerTab = document.getElementById("registerContent");
-    var loginTab = document.getElementById("loginContent");
-    var registerButton = document.getElementById("registerButton");
-    var loginButton = document.getElementById("loginButton");
+    const registerTab = document.querySelector("#registerContent");
+    const loginTab = document.querySelector("#loginContent");
+    const registerButton = document.querySelector("#registerButton");
+    const loginButton = document.querySelector("#loginButton");
 
     if (tab === "register") {
         registerTab.style.display = "block";
@@ -130,8 +145,7 @@ function switchTab(tab) {
     }
 }
 
-
 function closeModal() {
-    var modal = document.getElementById("registerModal");
+    var modal = document.querySelector("#registerModal");
     modal.style.display = "none";
 }

@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/styles.css" />
   <title>BeMovies</title>
 </head>
 
@@ -20,64 +20,54 @@
           <li><a href="#section-results"></a>latest</li>
           <li><a href="#genres"></a>genres</li>
           <li><a href="#registerModal" onclick="openModal('register')">register</a></li>
-          <li><a href="#registerModal" onclick="openModal('login')">signin</a></li>        </ul>
+          <li><a href="#registerModal" onclick="openModal('login')">signin</a></li>
+        </ul>
       </nav>
 
     </div>
   </header>
 
   <!-- Register/Login Modal -->
-<div id="registerModal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal()"><img src="img/closeModal.svg" alt=""></span>
-    <div class="modal-tabs">
-      <button class="tab-button" onclick="switchTab('login')">Login</button>
-      <button class="tab-button active" onclick="switchTab('register')">Register</button>
-    </div>
-    <div id="loginContent" class="tab-content" style="display: none;">
-      <form id="loginForm">
-        <label for="username" placeholder="Username"></label>
-        <input type="text" id="loginUsername" required>
-        <label for="password" placeholder="Password"></label>
-        <input type="password" id="loginPassword" required>
-        <label for="remember">Remember me</label>
-        <input type="checkbox" id="loginRemember">
-        <br>
-        <button type="submit" id="loginButton" class="loginButton">Login</button>
-        <a href="">I forgot my password</a>
-        <p>Not a member yet? <a href="#registerForm">Signin</a></p>
-      </form>
-    </div>
-    <div id="registerContent" class="tab-content">
-      <form id="registerForm">
-        <input type="text" id="registerUsername" placeholder="Username"required>
-        <br>
-        <input type="password" id="registerPassword" placeholder="Password" required>
-        <br>
-        <label for="remember">Remember me</label>
-        <input type="checkbox" id="registerRemember">
-        <br>
-        <button type="submit" id="registerButton" class="registerButton">Signup</button>
-      </form>
+  <div id="registerModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()"><img src="img/closeModal.svg" alt=""></span>
+      <div class="modal-tabs">
+        <button class="tab-button" onclick="switchTab('register')">SignUp</button>
+        <button class="tab-button active" onclick="switchTab('login')">Login</button>
+      </div>
+
+      <div id="registerContent" class="tab-content">
+        <form id="registerForm">
+          <input type="text" id="registerUsername" placeholder="Username" required>
+          <br>
+          <input type="password" id="registerPassword" placeholder="Password" required>
+          <br>
+          <label for="remember">Remember me</label>
+          <input type="checkbox" id="registerRemember">
+          <br>
+          <button type="submit" id="registerButton" class="registerButton">Signup</button>
+          <br>
+          <p>Already a member? <a href="#loginForm">Sign in</a></p>
+          <br><br>
+        </form>
+      </div>
+      <div id="loginContent" class="tab-content" style="display: none;">
+        <form id="loginForm">
+          <input type="text" id="loginUsername" placeholder="Username">
+          <input type="password" id="loginPassword" placeholder="Password">
+          <label for="remember">Remember me</label>
+          <input type="checkbox" id="loginRemember">
+          <br>
+          <button type="submit" id="registerButton" class="registerButton">Login</button>
+          <button type="submit" id="loginButton" class="loginButton">Login</button>
+          <br><br>
+          <a href="">I forgot my password</a>
+          <br><br>
+          <p>Not a member yet? <a href="#registerForm">Sign up</a></p>
+        </form>
+      </div>
     </div>
   </div>
-</div>
-  <!-- Register/Login Modal type 1
-<div id="registerModal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <h2 id="modalTitle"></h2>
-    <form id="modalForm">
-      <label for="username">Username:</label>
-      <input type="text" id="username" required>
-      <label for="password">Password:</label>
-      <input type="password" id="password" required>
-      <label for="remember">Remember me:</label>
-      <input type="checkbox" id="remember">
-      <button type="submit" id="submitButton"></button>
-    </form>
-  </div>
-</div>-->
 
   <!-- SEARCH FORM -->
   <main id="search">
@@ -93,100 +83,81 @@
   <section id="results">
     <div class="container">
       <div id="search-results">
-          <h3>Results for "[searchTerm]"</h3>
-          <br>
-          
-          <div class="swiper resultsSwiper">
-              <div class="swiper-wrapper">
-                  <div class="swiper-slide"><img src="img/poster.png"></div>
-                  <div class="swiper-slide"><img src="img/poster.png"></div>
-                  <div class="swiper-slide"><img src="img/poster.png"></div>
-                  <div class="swiper-slide"><img src="img/poster.png"></div>
-                  <div class="swiper-slide"><img src="img/poster.png"></div>
-              </div>
-          </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-      </div>
-    </div>
-</section>
-  <!-- SEARCH RESULTS -->
-  <section id="results">
-    <div class="container">
-      <div id="search-results">
-          <h3>Results for "[searchTerm]"</h3>
-          <br>
-          
-          <div class="swiper resultsSwiper">
-              <div class="swiper-wrapper">
-                  <div class="swiper-slide"><img src="img/poster.png"></div>
-                  <div class="swiper-slide"><img src="img/poster.png"></div>
-                  <div class="swiper-slide"><img src="img/poster.png"></div>
-                  <div class="swiper-slide"><img src="img/poster.png"></div>
-                  <div class="swiper-slide"><img src="img/poster.png"></div>
-              </div>
-          </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-      </div>
-    </div>
-</section>
-  <!-- SEARCH RESULTS -->
-  <section id="results">
-    <div class="container">
-      <div id="search-results">
-          <h3>Results for "[searchTerm]"</h3>
-          <br>
-          
-          <div class="swiper resultsSwiper">
-              <div class="swiper-wrapper">
-                  <div class="swiper-slide"><img src="img/poster.png"></div>
-                  <div class="swiper-slide"><img src="img/poster.png"></div>
-                  <div class="swiper-slide"><img src="img/poster.png"></div>
-                  <div class="swiper-slide"><img src="img/poster.png"></div>
-                  <div class="swiper-slide"><img src="img/poster.png"></div>
-              </div>
-          </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-      </div>
-    </div>
-</section>
-  
-<!-- LATEST RELEASE
-  <section id="releases">
-    <div class="container">
-      <div id="releases-swiper">
-          <h3>Latest Releases</h3>
-          <br>
-          
-          <div class="swiper releasesSwiper">
-              <div class="swiper-wrapper">
-                  <div class="swiper-slide"><img src="img/poster.png"></div>
-                  <div class="swiper-slide"><img src="img/poster.png"></div>
-                  <div class="swiper-slide"><img src="img/poster.png"></div>
-                  <div class="swiper-slide"><img src="img/poster.png"></div>
-                  <div class="swiper-slide"><img src="img/poster.png"></div>
-              </div>
-          </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-      </div>
-    </div>
-</section> -->
+        <h3>Results for "[searchTerm]"</h3>
+        <br>
 
-  <!-- RESULTS SECTION
-  <section id="#results">
-    <div class="container">
-
+        <div class="swiper resultsSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="img/poster.png"></div>
+            <div class="swiper-slide"><img src="img/poster.png"></div>
+            <div class="swiper-slide"><img src="img/poster.png"></div>
+            <div class="swiper-slide"><img src="img/poster.png"></div>
+            <div class="swiper-slide"><img src="img/poster.png"></div>
+          </div>
+        </div>
+        <div class="swiper-button-next resultsSwiper-next"></div>
+        <div class="swiper-button-prev resultsSwiper-prev"></div>
+      </div>
     </div>
   </section>
-  <!-- GALLERY 
-  <article>
-    <div class="container">
 
-    </div> 
-  </article>-->
+  <!-- LATEST RELEASES -->
+  <section id="releases">
+    <div class="container">
+      <div id="releases-content">
+        <h3>Results for "[searchTerm]"</h3>
+        <br>
+
+        <div class="swiper releasesSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="img/poster.png"></div>
+            <div class="swiper-slide"><img src="img/poster.png"></div>
+            <div class="swiper-slide"><img src="img/poster.png"></div>
+            <div class="swiper-slide"><img src="img/poster.png"></div>
+            <div class="swiper-slide"><img src="img/poster.png"></div>
+          </div>
+        </div>
+        <div class="swiper-button-next releasesSwiper-next"></div>
+        <div class="swiper-button-prev releasesSwiper-prev"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GENRES -->
+  <section id="genres">
+    <div class="container">
+      <div class="genres-title">
+        <h3>Movies by genre</h3>
+      </div>
+      <ul class="genres-list">
+        <li><a href="">Comedy</a></li>
+        <li>Drama</li>
+        <li>Action</li>
+        <li>Romance</li>
+        <li>Fantasy</li>
+        <li>Animation</li>
+      </ul>
+
+      <div id="selected-genre">
+        <h4>[Selected Genre]</h4>
+        <div class="swiper genresSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="img/poster.png"></div>
+            <div class="swiper-slide"><img src="img/poster.png"></div>
+            <div class="swiper-slide"><img src="img/poster.png"></div>
+            <div class="swiper-slide"><img src="img/poster.png"></div>
+            <div class="swiper-slide"><img src="img/poster.png"></div>
+          </div>
+        </div>
+        <div class="swiper-button-next genresSwiper-next"></div>
+        <div class="swiper-button-prev genresSwiper-prev"></div>
+      </div>
+
+    </div>
+
+  </section>
+
+
   <!-- FOOTER -->
   <footer>
     <div class="container">
@@ -210,9 +181,7 @@
           </li>
         </ul>
       </nav>
-      <div class="copyright">
-        <p>@2023 - All rights reserved</p>
-      </div>
+        <p class="copyright">@2023 - All rights reserved</p>
     </div>
   </footer>
 
