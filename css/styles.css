@@ -100,14 +100,13 @@ a:hover {
   line-height: 29px;
   letter-spacing: 0.03em;
   text-align: center;
-  border-radius: 8px;
-  border-top-left-radius: 8px;
   margin: 0;
   border: 1px solid #FFFFFF;
   cursor: pointer;
 }
 .tab-button.active {
-  background-color: red;
+  background-color: #CC0000;
+  border: transparent;
 }
 
 .tab-button:first-child {
@@ -161,6 +160,13 @@ input[type=checkbox] {
 .loginButton:hover,
 .registerButton:hover {
   background-color: #990000;
+}
+
+#loginForm a, #registerForm a {
+  color: #CC0000;
+}
+#loginForm a:hover, #registerForm a:hover {
+  color: black;
 }
 
 .close {

@@ -53,14 +53,13 @@ a:hover {
     line-height: 29px;
     letter-spacing: 0.03em;
     text-align: center;
-    border-radius: 8px;
-    border-top-left-radius: 8px;
     margin: 0;
     border: 1px solid $white;
     cursor: pointer;
 
     &.active{
-        background-color: red;
+        background-color: $red;
+        border: transparent;
     }
 }
 
@@ -115,6 +114,14 @@ input[type="checkbox"] {
 
     &:hover {
         background-color: darken($red, 10%);
+    }
+}
+
+#loginForm a, #registerForm a{
+    color: $red;
+
+    &:hover{
+        color: darken($red, 50%);
     }
 }
 
