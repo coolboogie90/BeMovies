@@ -146,6 +146,6 @@ function switchTab(tab) {
 }
 
 function closeModal() {
-    var modal = document.querySelector("#registerModal");
+    const modal = document.querySelector("#registerModal");
     modal.style.display = "none";
 }

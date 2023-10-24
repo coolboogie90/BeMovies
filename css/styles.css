@@ -523,33 +523,37 @@ body {
   grid-column: 13/span 1;
 }
 
-.container {
+.container-footer {
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  gap: 20em;
   background: #141517;
   padding: 1.875rem 0;
+  justify-content: center;
   align-items: space-between;
 }
-.container .logo {
+.container-footer .logo {
   font-family: "Inria Sans", sans-serif;
   color: white;
   font-weight: 700;
   font-size: 2.25em;
   line-height: 2.6975rem;
 }
-.container .logo:hover, .container .logo:visited {
+.container-footer .logo:hover, .container-footer .logo:visited {
   color: #FFFFFF;
 }
-.container .logo span {
+.container-footer .logo span {
   color: #CC0000;
 }
-.container nav.footer {
-  grid-column: 6/10;
-}
-.container nav.footer .nav-bar {
+.container-footer nav.footer .nav-bar {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  gap: 60px;
   text-transform: uppercase;
 }
-.container nav.footer .nav-bar li {
+.container-footer nav.footer .nav-bar li {
   font-family: "Inria Sans", sans-serif;
   font-size: 14px;
   font-weight: 700;
@@ -557,14 +561,14 @@ body {
   letter-spacing: 3%;
   text-transform: uppercase;
 }
-.container nav.footer .nav-bar li:hover {
+.container-footer nav.footer .nav-bar li:hover {
   cursor: pointer;
   color: #CC0000;
 }
-.container nav.footer .copyright {
-  grid-column: 11/14;
+.container-footer nav.footer .copyright {
+  left: 50px;
+  text-align: center;
 }
-.container nav.footer .copyright p {
-  text-align: right;
+.container-footer nav.footer .copyright .copyright > p {
   color: #B8B8B8;
 }
