@@ -17,9 +17,26 @@
         justify-content: space-around;
         gap: 45px;
         margin-bottom: 40px;
-        padding: 20px 0;
+        padding: 28px 0;
         border-bottom: 1px solid $white;
 
+        li {
+            
+            background-color: transparent;
+            align-items: center;
+            border-radius: 8px;
+            color: $white;
+            line-height: 1;
+            padding: 10px;
+            transition: padding 0.2s; 
+            box-sizing: border-box; 
+        }
+    
+        li:hover, li:active {
+            cursor: pointer;
+            background-color: $red;
+            padding: 10px;
+        }
     }
 
     #selected-genre {

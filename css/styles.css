@@ -435,8 +435,23 @@ body {
   justify-content: space-around;
   gap: 45px;
   margin-bottom: 40px;
-  padding: 20px 0;
+  padding: 28px 0;
   border-bottom: 1px solid #FFFFFF;
+}
+#genres .genres-list li {
+  background-color: transparent;
+  align-items: center;
+  border-radius: 8px;
+  color: #FFFFFF;
+  line-height: 1;
+  padding: 10px;
+  transition: padding 0.2s;
+  box-sizing: border-box;
+}
+#genres .genres-list li:hover, #genres .genres-list li:active {
+  cursor: pointer;
+  background-color: #CC0000;
+  padding: 10px;
 }
 #genres #selected-genre {
   grid-column: 3/13;
