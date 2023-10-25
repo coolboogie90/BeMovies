@@ -1,7 +1,7 @@
-let usrInput = document.querySelector(`input`)
 let search = document.querySelector('#search');
+let searchForm = document.querySelector('#search-form');
+let usrInput = searchForm.querySelector(`input`).value;
 
-let swiper = document.querySelector(`resultsSwiper`);
 
 // INITIALIZE SEARCH BTN
 let btnSearch = search.querySelector(`button`);
@@ -22,7 +22,7 @@ const options = {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhYzQwMDg4Y2U2YTJiYzVkODAzZGU1ZTIzZGVhYmZhNCIsInN1YiI6IjY1MzI4MTNkNmY4ZDk1MDEyY2QxMDFjMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.GKXXSCmrHAEi0qnltwHnBhFdTBXuLuQVctipXiw0P3M'
+      Authorization: 'Bearer TMDB_TOKEN'
     }
   };
   
