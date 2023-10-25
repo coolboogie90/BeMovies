@@ -1,5 +1,5 @@
-1. Fix Register Tab with only html /css
-2. Fix copyrigth footer
+1. -------
+2. Fix copyrigth footer ----> OK
 3. Create template modal movie details
 4. Fix slide :hover
 5. Add tabs genres

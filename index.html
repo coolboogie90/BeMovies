@@ -90,13 +90,16 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <img src="img/poster.png" alt="">
-              <div class="overlay">
+
+              <!--Overlay wip, pour l'instant ne détecte pas curseur sur img-->
+              <!-- <div class="overlay">
                 <p class="title">The Godfather part III</p>
                 <p class="date">1990</p>
                 <p class="genre">Crime / Drama / Thriller</p>
                 <img class="starScore" src="img/star.svg" alt="starScore">
                 <p class="score">7.4</p>
-              </div>
+              </div> -->
+
             </div>
             <div class="swiper-slide"><img src="img/poster.png"></div>
             <div class="swiper-slide"><img src="img/poster.png"></div>
@@ -110,7 +113,7 @@
     </div>
   </section>
 
-<!--MOVIE MODAL WIP-->
+<!--MOVIE MODAL WIP ignore pour l'instant-->
 <!-- <dialog open class="movieMod" id="modal-movie">
   <span class="close" id="closeModalBtn">&times;</span>
   <h2 id="modalTitle">Movie Title</h2>
@@ -157,7 +160,6 @@
         <li>Fantasy</li>
         <li>Animation</li>
       </ul>
-
       <div id="selected-genre">
         <h4>[Selected Genre]</h4>
         <div class="swiper genresSwiper">
@@ -172,11 +174,8 @@
         <div class="swiper-button-next genresSwiper-next"></div>
         <div class="swiper-button-prev genresSwiper-prev"></div>
       </div>
-
     </div>
-
   </section>
-
 
   <!-- FOOTER -->
   <footer>
@@ -210,7 +209,8 @@
   <!--JAVASCRIPT-->
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
-  <script src="app.js" defer></script>
+  <script src="smuggler.js"></script>
+  <script src="app.js"></script>
 </body>
 
 </html>
