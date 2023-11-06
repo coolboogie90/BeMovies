@@ -1,2 +1,5 @@
 # api keys
 .env
+
+#fuckin DS Store
+.DS_Store

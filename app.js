@@ -52,7 +52,7 @@ const options = async (usrInput) => {
         method: 'GET',
         headers: {
           accept: 'application/json',
-          Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1MzE2NjIxYmNlMDhlYjEyYjNmMzdkNzU0MmJmYWRhYSIsInN1YiI6IjY1MzI4MTNkNmY4ZDk1MDEyY2QxMDFjMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.CC7Xb5BjDRTiHWxh2gt-'
+          Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1MzE2NjIxYmNlMDhlYjEyYjNmMzdkNzU0MmJmYWRhYSIsInN1YiI6IjY1MzI4MTNkNmY4ZDk1MDEyY2QxMDFjMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.CC7Xb5BjDRTiHWxh2gt-th3UDmkcgl04f8qy3_pAJuE'
         }
     };
 
