@@ -31,8 +31,6 @@ let swiperResults = document.querySelector(`#swiper-results-search`);
 
 
 
-
-
 // SEARCH BAR INPUT
 searchForm.addEventListener('keydown', async (event) => {
     if (event.key === "Enter") {
@@ -42,7 +40,6 @@ searchForm.addEventListener('keydown', async (event) => {
         result.innerHTML = `Results for ${usrInput}`;
     }
 })
-
 
 
 
@@ -61,5 +58,7 @@ const options = async (usrInput) => {
         .then(response => console.log(response))
         .catch(err => console.error(err));
 }
+
+
 
 
