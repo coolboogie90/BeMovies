@@ -144,12 +144,13 @@ function openModal(type) {
     const loginTab = document.querySelector("#loginContent");
     const registerButton = document.querySelector("#registerButton");
     const loginButton = document.querySelector("#loginButton");
-
+    
     if (type === "register") {
         registerTab.style.display = "block";
         loginTab.style.display = "none";
         registerButton.style.display = "block";
         loginButton.style.display = "none";
+        
     } else if (type === "login") {
         registerTab.style.display = "none";
         loginTab.style.display = "block";
@@ -163,19 +164,18 @@ function openModal(type) {
 function switchTab(tab) {
     const registerTab = document.querySelector("#registerContent");
     const loginTab = document.querySelector("#loginContent");
-    const registerButton = document.querySelector("#registerButton");
-    const loginButton = document.querySelector("#loginButton");
-
+    const tabBtn = document.querySelectorAll("tab-button");
+    
     if (tab === "register") {
         registerTab.style.display = "block";
         loginTab.style.display = "none";
-        registerButton.classList.add("active");
-        loginButton.classList.remove("active");
+        
+        tabBtn.classList.toggle("active");
     } else if (tab === "login") {
         registerTab.style.display = "none";
         loginTab.style.display = "block";
-        registerButton.classList.remove("active");
-        loginButton.classList.add("active");
+        
+        tabBtn.classList.toggle("active");
     }
 }
 

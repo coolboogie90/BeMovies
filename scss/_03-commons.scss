@@ -57,10 +57,11 @@ a:hover {
     border: 1px solid $white;
     cursor: pointer;
 
-    &.active{
-        background-color: $red;
-        border: transparent;
-    }
+}
+
+.active{
+    background-color: $red;
+    border: transparent;
 }
 
 .tab-button:first-child {
