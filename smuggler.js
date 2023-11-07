@@ -183,3 +183,9 @@ function closeModal() {
     const modal = document.querySelector("#registerModal");
     modal.style.display = "none";
 }
+
+
+document.querySelector('a[href="#search"]').addEventListener('click', function(event) {
+    event.preventDefault();
+    document.querySelector('#search').scrollIntoView({behavior: "smooth"});
+  });
